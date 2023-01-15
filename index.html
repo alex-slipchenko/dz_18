@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./myform.css">
+</head>
+
+
+
+<body>
+    <svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="768" height="800" viewBox="0 0 768 800">
+        <defs>
+            <g id="icon-close">
+                <path class="path1"
+                    d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z">
+                </path>
+            </g>
+        </defs>
+    </svg>
+
+    <div class="wrapper">
+        <h1>Simple jQuery Modal</h1>
+        <button class=" buy">Show modal</button>
+    </div>
+
+    <div class="modal">
+        <div class="modal-overlay modal-toggle"></div>
+        <div class="modal-wrapper modal-transition">
+            <div class="modal-header">
+                <button class="modal-close modal-toggle"><svg class="icon-close icon" viewBox="0 0 32 32">
+                        <use xlink:href="#icon-close"></use>
+                    </svg></button>
+                <h2 class="modal-heading">This is my modal</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-content">
+                    <form action="#" id="myForm">
+                        <div class="form_input">
+                            <input type="text" id="fio" name="initials" placeholder="ПІБ покупця">
+                        </div>
+                        <div class="form_input">
+                            <select name="select">
+                                <option value="Дніпро" selected>Дніпро</option>
+                                <option value="Київ">Київ</option>
+                                <option value="Львів">Львів</option>
+                                <option value="Запоріжжя">Запоріжжя</option>
+                                <option value="Харків">Харків</option>
+                            </select>
+                        </div>
+                        <div class="form_input">
+                            <input list="newpostNumber" name="number" placeholder="виберіть відділення">
+                            <datalist id="newpostNumber">
+                                <option value="21">
+                                <option value="35">
+                                <option value="45">
+                                <option value="58">
+                                <option value="67">
+                            </datalist>
+                        </div>
+                        <div class="form_input">
+                            <input type="radio" name="myMethod" checked value="Післяплати">
+                            Післяплати
+                        </div>
+                        <div class="form_input">
+                            <input type="radio" name="myMethod" value="Оплата банківською карткою">Оплата банківською
+                            карткою
+                        </div>
+                        <div class="form_input">
+                            <input type="range" id="vol" name="rangeValue" min="0" max="50" value="0">
+                            <output id="rangeCount">0: Кількість продукції</output>
+                        </div>
+                        <div class="form_input">
+                            <input type="text" name="myEmail" placeholder="your email">
+                        </div>
+                        <div class="form_input">
+                            <input type="tel" name="myPhone" placeholder="+3(80xx)xxx xx xx">
+                        </div>
+                        <div class="form_input"><textarea id="story" name="story" style="width:300px; height:150px"
+                                placeholder="Коментар до замовлення ...">
+            </textarea></div>
+                        <div>
+                            <input type="submit" class="area">
+                        </div>
+
+                    </form>
+
+
+                    <!-- <button class="modal-toggle">Update</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- +++++++++++++++
+    <button class="buy">купити</button> -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <script src="./myform.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
